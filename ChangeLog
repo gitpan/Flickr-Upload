@@ -1,3 +1,23 @@
+2004-09-05 15:18  cpb
+
+	* Upload.pm: *: don't export upload() by default.  *: upload()
+	returns the resulting photo identifier on success (still undef on
+	failure). We're also nicer about the resulting failure message.
+
+2004-09-05 15:17  cpb
+
+	* flickr_upload: *: output uploaded photoid for each image *: read
+	config from ~/.flickrrc.
+
+2004-09-05 15:16  cpb
+
+	* t/failupload.t: in theory, zero might be a valid photoid.
+	Probably not, but...
+
+2004-09-05 15:16  cpb
+
+	* t/: failupload.t, upload.t: change how we 'use' the module.
+
 2004-09-04 18:33  cpb
 
 	* Upload.pm: force version increment
