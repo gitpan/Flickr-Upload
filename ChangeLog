@@ -1,3 +1,36 @@
+2004-12-05 12:27  cpb
+
+	* MANIFEST, t/progress.t: Add an example/test which uses the
+	  DYNAMIC_FILE_UPLOAD functionality to implement some progress
+	  feedback.
+
+2004-12-05 12:17  cpb
+
+	* Upload.pm: minor formatting tweak, but I also need to bump the
+	  version to do a new release.
+
+2004-12-05 12:17  cpb
+
+	* t/: request.t, upload.t: *: HACK for the LWP content length
+	  warning. Apparently, add_parts() doesn't cause the existing
+	  content length to be invalidated and LWP complains when it
+	  recalculates it anyways.
+
+	  *: tweak description... sometimes the :: doesn't make it through.
+
+2004-12-05 11:58  cpb
+
+	* t/: request.t, upload.t: *: oops, chomp the password
+
+	  *: make test image private. We don't really need to spam the tag
+	  index with kernel and perl over and over again...
+
+2004-12-05 11:44  cpb
+
+	* t/: failupload.t, request.t, upload.t: make tests fail gracefully
+	  if no password file provided. This way I can do sane testing but
+	  cpansmoke won't complain.
+
 2004-12-05 00:12  cpb
 
 	* MANIFEST, Upload.pm, t/request.t: *: added make_upload_request

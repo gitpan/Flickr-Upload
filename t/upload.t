@@ -3,6 +3,13 @@ BEGIN { use_ok('Flickr::Upload', 'upload') };
 
 use_ok('LWP::UserAgent');
 
+# grab a password. If no password, fail nicely.
+my $pw = '******';
+open( F, '<', 't/password' ) or (print STDERR "No password file\n" && exit 0);
+$pw = <F>;
+chomp $pw;
+close F;
+
 my $ua = LWP::UserAgent->new;
 ok(defined $ua);
 
@@ -12,11 +19,12 @@ my $rc = upload(
 	$ua,
 	'photo' => 't/Kernel & perl.jpg',
 	'email' => 'cpb@cpan.org',
-	'password' => '******',
+	'password' => $pw,
 	'tags' => "test kernel perl cat dog",
-	'is_public' => 1,
-	'is_friend' => 1,
-	'is_family' => 1,
+	'description' => "Flickr Upload test for $0",
+	'is_public' => 0,
+	'is_friend' => 0,
+	'is_family' => 0,
 );
 
 ok( defined $rc );
