@@ -1,3 +1,30 @@
+2005-01-13 14:33  cpb
+
+	* README (1.3), Upload.pm (1.16):
+
+	update documentation a touch. It's a new year, you know.
+
+2005-01-13 14:31  cpb
+
+	* Upload.pm (1.15):
+
+	$VERSION++
+
+2005-01-13 14:31  cpb
+
+	* flickr_upload (1.6):
+
+	use the async option to pipeline the upload process so we wait for
+	photoid assignments after _all_ the uploads are completed. This
+	should reduce the overall time are multi-image batch uploads quite
+	a bit.
+
+2005-01-13 14:16  cpb
+
+	* MANIFEST (1.7):
+
+	added async.t to MANIFEST
+
 2005-01-13 04:28  cpb
 
 	* t/progress.t (1.2):

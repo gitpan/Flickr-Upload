@@ -29,7 +29,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
 );
 
-our $VERSION = do { my @r = (q$Revision: 1.14 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+our $VERSION = do { my @r = (q$Revision: 1.16 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 # Preloaded methods go here.
 
@@ -294,7 +294,7 @@ Christophe Beauregard, L<cpb@cpan.org>
 
 This module is not an official Flickr.com (or Ludicorp) service.
 
-Copyright (C) 2004 by Christophe Beauregard
+Copyright (C) 2004,2005 by Christophe Beauregard
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.3 or,
