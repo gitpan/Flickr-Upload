@@ -1,3 +1,16 @@
+2004-09-04 18:33  cpb
+
+	* Upload.pm: force version increment
+
+2004-09-04 18:33  cpb
+
+	* Makefile.PL, README: assorted documentation niceties. Dunno how I
+	forgot about the README...
+
+2004-09-04 16:29  cpb
+
+	* META.yml: remove META.yml from CVS
+
 2004-09-04 16:29  cpb
 
 	* flickr_upload: - assorted pod additions - cleanup failure
