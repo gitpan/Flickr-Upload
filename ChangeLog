@@ -1,18 +1,34 @@
+2004-12-05 00:12  cpb
+
+	* MANIFEST, Upload.pm, t/request.t: *: added make_upload_request
+	  and upload_request functions to allow for more direct
+	  manipulation of the HTTP::Request structure.
+
+	  *: added t/request.t to demonstrate how said functionality can be
+	  used to upload images directly from memory rather than having to
+	  create temporary files. It appears, unfortunately, that LWP
+	  doesn't like the way I do things, but it only complains rather
+	  than bailing. The end result works.
+
+2004-12-04 22:36  cpb
+
+	* t/: failupload.t, upload.t: strip out the test comments
+
 2004-09-05 15:18  cpb
 
 	* Upload.pm: *: don't export upload() by default.  *: upload()
-	returns the resulting photo identifier on success (still undef on
-	failure). We're also nicer about the resulting failure message.
+	  returns the resulting photo identifier on success (still undef on
+	  failure). We're also nicer about the resulting failure message.
 
 2004-09-05 15:17  cpb
 
 	* flickr_upload: *: output uploaded photoid for each image *: read
-	config from ~/.flickrrc.
+	  config from ~/.flickrrc.
 
 2004-09-05 15:16  cpb
 
 	* t/failupload.t: in theory, zero might be a valid photoid.
-	Probably not, but...
+	  Probably not, but...
 
 2004-09-05 15:16  cpb
 
@@ -25,7 +41,7 @@
 2004-09-04 18:33  cpb
 
 	* Makefile.PL, README: assorted documentation niceties. Dunno how I
-	forgot about the README...
+	  forgot about the README...
 
 2004-09-04 16:29  cpb
 
@@ -34,22 +50,22 @@
 2004-09-04 16:29  cpb
 
 	* flickr_upload: - assorted pod additions - cleanup failure
-	handling
+	  handling
 
 2004-09-04 16:10  cpb
 
 	* MANIFEST, Makefile.PL, flickr_upload: - added flickr_upload
-	script - clean up Makefile.PL (i.e. add prereqs, etc).
+	  script - clean up Makefile.PL (i.e. add prereqs, etc).
 
 2004-09-04 16:09  cpb
 
 	* t/: failupload.t, upload.t: tags now just a string rather than
-	list ref
+	  list ref
 
 2004-09-04 16:09  cpb
 
 	* Upload.pm: assorted fixes: - pod fixes - tags now just a string
-	rather than a list ref
+	  rather than a list ref
 
 2004-09-04 14:03  cpb
 
@@ -62,7 +78,7 @@
 2004-09-04 11:49  cpb
 
 	* t/: Flickr-Upload.t, Kernel & perl.jpg, failupload.t, upload.t:
-	adjusted testing, added test image
+	  adjusted testing, added test image
 
 2004-09-04 11:49  cpb
 
@@ -75,10 +91,10 @@
 2004-09-02 17:34  cpb
 
 	* MANIFEST, Makefile.PL, README, Upload.pm, t/Flickr-Upload.t:
-	Initial revision
+	  Initial revision
 
 2004-09-02 17:34  cpb
 
 	* MANIFEST, Makefile.PL, README, Upload.pm, t/Flickr-Upload.t:
-	initial import
+	  initial import
 
