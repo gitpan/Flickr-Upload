@@ -1,3 +1,36 @@
+2005-01-13 04:28  cpb
+
+	* t/progress.t (1.2):
+
+	chunk could be undefined.
+
+2005-01-13 04:23  cpb
+
+	* Upload.pm (1.14), t/async.t (1.1):
+
+	*: modified make_upload_request() to allow async and properly
+	handle returned ticket ids.
+
+	*: added check_upload() function to check status up async tickets
+
+	*: added t/async.t to test/demo async functionality
+
+2005-01-08 17:13  cpb
+
+	* Upload.pm (1.13):
+
+	trim down commentary on async uploading. It _might_ be useful to
+	such an API, given recent problems with delays in the uploading
+	process (in something like sync conduits, for example).
+
+2005-01-08 17:06  cpb
+
+	* Upload.pm (1.12), flickr_upload (1.5):
+
+	L<> in NAME section gets interpreted as links to a man page,
+	leading to a synopsis like "Flickr::Upload - Upload images to the
+	flickr.com manpage".
+
 2005-01-04 00:37  cpb
 
 	* Upload.pm (1.11):
