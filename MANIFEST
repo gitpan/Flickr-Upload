@@ -1,0 +1,9 @@
+ChangeLog
+Makefile.PL
+MANIFEST
+README
+Upload.pm
+META.yml                                 Module meta-data (added by MakeMaker)
+t/upload.t
+t/failupload.t
+flickr_upload

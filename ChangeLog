@@ -1,0 +1,51 @@
+2004-09-04 16:29  cpb
+
+	* flickr_upload: - assorted pod additions - cleanup failure
+	handling
+
+2004-09-04 16:10  cpb
+
+	* MANIFEST, Makefile.PL, flickr_upload: - added flickr_upload
+	script - clean up Makefile.PL (i.e. add prereqs, etc).
+
+2004-09-04 16:09  cpb
+
+	* t/: failupload.t, upload.t: tags now just a string rather than
+	list ref
+
+2004-09-04 16:09  cpb
+
+	* Upload.pm: assorted fixes: - pod fixes - tags now just a string
+	rather than a list ref
+
+2004-09-04 14:03  cpb
+
+	* Upload.pm, t/failupload.t, t/upload.t: upload() works
+
+2004-09-04 11:49  cpb
+
+	* MANIFEST: change tests
+
+2004-09-04 11:49  cpb
+
+	* t/: Flickr-Upload.t, Kernel & perl.jpg, failupload.t, upload.t:
+	adjusted testing, added test image
+
+2004-09-04 11:49  cpb
+
+	* Upload.pm: laid out pod, initial stab at how API will work
+
+2004-09-02 17:43  cpb
+
+	* MANIFEST, META.yml: added META.yml
+
+2004-09-02 17:34  cpb
+
+	* MANIFEST, Makefile.PL, README, Upload.pm, t/Flickr-Upload.t:
+	Initial revision
+
+2004-09-02 17:34  cpb
+
+	* MANIFEST, Makefile.PL, README, Upload.pm, t/Flickr-Upload.t:
+	initial import
+

@@ -1,0 +1,13 @@
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Flickr-Upload
+version:      1.04
+version_from: Upload.pm
+installdirs:  site
+requires:
+    HTTP::Request::Common:         1
+    LWP::UserAgent:                1
+    XML::Parser::Lite::Tree:       0.03
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.17
