@@ -1,3 +1,27 @@
+2005-01-04 00:37  cpb
+
+	* Upload.pm (1.11):
+
+	version++
+
+2005-01-04 00:36  cpb
+
+	* flickr_upload (1.4):
+
+	Another Michael, another bug report...
+
+	_Michael Parker says:_
+
+	I noticed this in the flickr_upload script distributed with the
+	Flickr::Upload package (at least until 1.10):
+
+	   'public=i' => sub { $args{is_public} = $_[1] },
+	   'friend=i' => sub { $args{is_public} = $_[1] },
+	   'family=i' => sub { $args{is_public} = $_[1] },
+
+	It looks like a cut and paste error, using is_public for all 3
+	rather than is_friend and is_family.
+
 2004-12-14 18:03  cpb
 
 	* Upload.pm (1.10):
