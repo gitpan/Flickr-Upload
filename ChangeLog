@@ -1,3 +1,65 @@
+2005-02-05 23:40  cpb
+
+	* README (1.4):
+
+	add blurb about thickr_upload
+
+2005-02-05 23:38  cpb
+
+	* MANIFEST (1.9), Makefile.PL (1.8), thickr_upload (1.1),
+	thkr_upload (1.7[DEAD]):
+
+	rename thkr_upload to thickr_upload. Long story, won't bother
+	explaining.
+
+2005-02-05 23:35  cpb
+
+	* thkr_upload (1.6):
+
+	remove the logo stuff. We'll just show some blankness.
+
+2005-02-05 23:16  cpb
+
+	* thkr_upload (1.5):
+
+	*: remove some debug junk *: replace Tk::FileSelect with
+	Tk::getOpenFile() so we can do multiple selection. This really
+	streamlines things.
+
+2005-02-05 21:11  cpb
+
+	* thkr_upload (1.4):
+
+	fix comment about best way to use LWP from Tk
+
+2005-01-17 04:03  cpb
+
+	* thkr_upload (1.3):
+
+	more churning on the uploading. Nicer cleanup.
+
+2005-01-16 04:50  cpb
+
+	* thkr_upload (1.2):
+
+	*: clean up preview a bit. Now properly scales images to fit,
+	manages memory better, etc.  *: make preview area a drag and drop
+	site for photos. DnD code is a little crufty but works *: update
+	menus a touch. Help is actually in the right place *: switch to
+	messageBox for Help|About *: documentation *: use Tk::HTML::IO to,
+	hopefully, do better IO for the upload. Haven't tested this and
+	need to refine the upload process some anyways. We really want
+	something like an "upload manager" view of what's happening.  *:
+	new photos are added at the front of the list. Just better
+	feedback.
+
+2005-01-15 05:08  cpb
+
+	* MANIFEST (1.8), Upload.pm (1.17), flickr_logo_beta.gif (1.1),
+	thkr_upload (1.1):
+
+	added initial cut at thkr_upload, a Tk-based GUI upload client
+
 2005-01-13 14:33  cpb
 
 	* README (1.3), Upload.pm (1.16):

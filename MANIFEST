@@ -10,3 +10,4 @@ t/request.t
 t/progress.t
 t/async.t
 flickr_upload
+thickr_upload

@@ -29,7 +29,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
 );
 
-our $VERSION = do { my @r = (q$Revision: 1.16 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+our $VERSION = do { my @r = (q$Revision: 1.17 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 # Preloaded methods go here.
 
@@ -212,7 +212,8 @@ parameters.
 Takes all the same parameters as L<upload>, except that the photo argument
 isn't required. This in intended so that the caller can include it by
 messing directly with the HTTP content (via C<$DYNAMIC_FILE_UPLOAD> or
-the L<HTTP::Message> class, among other things).
+the L<HTTP::Message> class, among other things). See C<t/> directory from
+the source distribution for examples.
 
 Returns a standard L<HTTP::Response> POST object. The caller can manually
 do the upload or just call the L<upload_request> function.
