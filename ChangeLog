@@ -1,3 +1,15 @@
+2004-12-14 18:03  cpb
+
+	* Upload.pm (1.10):
+
+	bump version number
+
+2004-12-14 18:03  cpb
+
+	* Makefile.PL (1.7):
+
+	Grrr... forgot the perl version dependency in Makefile.PL...
+
 2004-12-14 00:38  cpb
 
 	* Upload.pm (1.9):
