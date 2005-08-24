@@ -1,7 +1,7 @@
 use ExtUtils::MakeMaker;
 
 sub MY::postamble {
-	return "ChangeLog:\n\tcvs2cl.pl -r --no-wrap --show-dead -S --utc\n\n";
+	return "ChangeLog:\n\tcvs2cl -r --no-wrap --show-dead -S --utc\n\n";
 }
 
 WriteMakefile(
@@ -13,8 +13,9 @@ WriteMakefile(
 		'LWP::UserAgent' => 1,
 		'HTTP::Request::Common' => 1,
 		'XML::Parser::Lite::Tree' => 0.03,
+		'Flickr::API' => 0.07,
 	},
-	'EXE_FILES' => [ 'flickr_upload', 'thickr_upload' ],
+	'EXE_FILES' => [ 'flickr_upload' ],
 	'clean' => { FILES => 'ChangeLog' },
 	'depend' => { 'distdir' => 'ChangeLog' },
 );

@@ -1,3 +1,36 @@
+2005-08-24 02:32  cpb
+
+	* Makefile.PL (1.11):
+
+	(#8) switched to Debian, =cvs2cl= is called something else
+
+2005-08-24 02:31  cpb
+
+	* Upload.pm (1.20):
+
+	(#8) remove some debug code, handle undef photo situation.
+
+2005-08-24 02:29  cpb
+
+	* Makefile.PL (1.10), Upload.pm (1.19), flickr_upload (1.7),
+	  thickr_upload (1.3), t/async.t (1.2), t/failupload.t (1.8),
+	  t/progress.t (1.3), t/request.t (1.5), t/upload.t (1.9):
+
+	(#8) first stab at getting =Flickr::Upload= working with the new authentication.
+
+	*: had to completely gut the interface and inherit from =Flickr::API=.
+	*: straight and async uploading via =flickr_upload= _works_
+	*: this means =Flickr::Upload::upload()= and =Flickr::Upload::check_upload()= methods
+	are good.
+	*: tests /Flickr-Upload/t/request.t and /Flickr-Upload/t/progress.t are _not_
+	passing, although the progress test is still uploading the image.
+
+2005-08-24 01:57  cpb
+
+	* MANIFEST (1.10):
+
+	(#8) remove =thickr_upload= for now.
+
 2005-03-16 02:31  cpb
 
 	* Upload.pm (1.18):
