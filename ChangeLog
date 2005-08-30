@@ -1,3 +1,37 @@
+2005-08-30 22:43  cpb
+
+	* MANIFEST (1.11), t/Kernel & perl.jpg (1.2[DEAD]), t/async.t
+	  (1.3), t/failupload.t (1.9), t/progress.t (1.4), t/request.t
+	  (1.6), t/testimage.jpg (1.1), t/upload.t (1.10):
+
+	change the test image name. Needs to go in MANIFEST...
+
+2005-08-28 01:05  cpb
+
+	* flickr_upload (1.9):
+
+	(#11) key and secret can be specified in =~/.flickrrc=. This allows a user to get one
+	API key, authenticate against it, and use =flickr_upload= and a bunch of personal
+	scripts with just =~/.flickrc= for storing the authentication info.
+
+2005-08-28 00:59  cpb
+
+	* README (1.6), Upload.pm (1.22):
+
+	(#11) change of ownership
+
+2005-08-28 00:35  cpb
+
+	* Upload.pm (1.21), flickr_upload (1.8):
+
+	(#11) some documentation cleanups
+
+2005-08-24 02:36  cpb
+
+	* Makefile.PL (1.12), README (1.5):
+
+	(#8) really remove refs to =thickr_upload=.
+
 2005-08-24 02:32  cpb
 
 	* Makefile.PL (1.11):
