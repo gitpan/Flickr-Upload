@@ -1,7 +1,7 @@
 # http://module-build.sourceforge.net/META-spec.html
 #XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
 name:         Flickr-Upload
-version:      1.24
+version:      1.25
 version_from: Upload.pm
 installdirs:  site
 requires:
@@ -9,7 +9,7 @@ requires:
     Getopt::Long:                  1
     HTTP::Request::Common:         1
     LWP::UserAgent:                1
-    Pos::Usage:                    1
+    Pod::Usage:                    1
     XML::Parser::Lite::Tree:       0.03
 
 distribution_type: module
