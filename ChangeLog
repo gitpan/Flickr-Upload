@@ -1,3 +1,40 @@
+2007-03-19 00:31  cpb
+
+	* Makefile.PL (1.13):
+
+	http://rt.cpan.org/Ticket/Display.html?id=25521
+
+	Add Pod::Usage and Getopt::Long to dependencies
+
+2006-12-19 17:59  cpb
+
+	* Upload.pm (1.24):
+
+	http://rt.cpan.org/Ticket/Display.html?id=23990
+
+	=Flickr::Upload::new()= takes a hashref (ala =Flickr::API=).
+
+2006-09-22 00:27  cpb
+
+	* Upload.pm (1.23):
+
+	upload URI has changed
+
+2006-01-21 17:36  cpb
+
+	* flickr_upload (1.11):
+
+	add some notes on generating tags with embedded spaces to the --tag
+	documentation.
+
+2006-01-05 23:52  cpb
+
+	* flickr_upload (1.10):
+
+	_is_friend_ should be _is_family_
+
+	https://rt.cpan.org/NoAuth/Bug.html?id=16930
+
 2005-08-30 22:43  cpb
 
 	* MANIFEST (1.11), t/Kernel & perl.jpg (1.2[DEAD]), t/async.t

@@ -26,7 +26,7 @@ our @EXPORT_OK = ();
 
 our @EXPORT = qw();
 
-our $VERSION = do { my @r = (q$Revision: 1.22 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+our $VERSION = do { my @r = (q$Revision: 1.24 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 # Preloaded methods go here.
 
@@ -62,7 +62,11 @@ Flickr::Upload - Upload images to C<flickr.com>
 
 	use Flickr::Upload;
 
-	my $ua = Flickr::Upload->new( 'key' => '90909354', 'secret' => '37465825' );
+	my $ua = Flickr::Upload->new(
+		{
+			'key' => '90909354',
+			'secret' => '37465825'
+		});
 	$ua->upload(
 		'photo' => '/tmp/image.jpg',
 		'auth_token' => $auth_token,
@@ -80,15 +84,19 @@ Upload an image to L<flickr.com>.
 
 =head2 new
 
-	my $ua = Flickr::Upload->new( 'key' => '90909354', 'secret' => '37465825' );
+	my $ua = Flickr::Upload->new(
+		{
+			'key' => '90909354',
+			'secret' => '37465825'
+		});
 
-Instatiates a L<Flickr::Upload> instance. The C<key> argument is your API key and the
-C<secret> is the API secret associated with it. To get an API key and secret, go to
-L<http://www.flickr.com/services/api/key.gne>.
+Instatiates a L<Flickr::Upload> instance. The C<key> argument is your
+API key and the C<secret> is the API secret associated with it. To get an
+API key and secret, go to L<http://www.flickr.com/services/api/key.gne>.
 
 The resulting L<Flickr::Upload> instance is a subclass of L<Flickr::API>
-and thus can be used for any other Flickr API calls. Note also that L<Flickr::Upload>
-is also a subclass of L<LWP::UserAgent>.
+and thus can be used for any other Flickr API calls. Note also that
+L<Flickr::Upload> is also a subclass of L<LWP::UserAgent>.
 
 =head2 upload
 
@@ -231,7 +239,7 @@ sub make_upload_request {
 	# _required_ by the uploader.
 	die "Missing 'auth_token' argument" unless $args{'auth_token'};
 
-	my $uri = $args{'uri'} || 'http://www.flickr.com/services/upload/';
+	my $uri = $args{'uri'} || 'http://api.flickr.com/services/upload/';
 
 	# passed in separately, so remove from the hash
 	delete $args{uri};
