@@ -1,3 +1,10 @@
+commit 90867ead83ac5f317f6d4fbe2a018fd5185af4ce
+Author: cpb <cpb@earth.localdomain>
+Commit: cpb <cpb@earth.localdomain>
+
+    <sigh> CPAN doesn't like it when you remove the $VERSION from a module.
+    So we'll just revert the whole "move into Makefile.PL" thing.
+
 commit 30640fd1f34472de6834f5c1745b62f199529ff4
 Author: cpb <cpb@earth.localdomain>
 Commit: cpb <cpb@earth.localdomain>
