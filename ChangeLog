@@ -1,3 +1,40 @@
+commit 7c3ce4a0e76e48266359a6c4c4e54f82b64add97
+Author: cpb <cpb@earth.localdomain>
+Commit: cpb <cpb@earth.localdomain>
+
+    Minor documentation cleanups
+
+commit 81380665d8e465bc69680395bf6647c6d9f7c632
+Author: cpb <cpb@earth.localdomain>
+Commit: cpb <cpb@earth.localdomain>
+
+    oops, forgot to commit that. Same as last, just some build fixes.
+
+commit d1a6550871f973f3df0b262f0646c8a5b6bb896a
+Author: cpb <cpb@earth.localdomain>
+Commit: cpb <cpb@earth.localdomain>
+
+    Clean up the build dependencies so the generated files actually do get
+    generated when we make a dist.
+
+commit a3e8aa2cec4da0f2f72a78dd2d87ff5723416180
+Author: cpb <cpb@earth.localdomain>
+Commit: cpb <cpb@earth.localdomain>
+
+    Drop some files we're no longer using/maintaining. We can always get 'em back.
+
+commit db32324d302838a26288326b57f789f61a5beef2
+Author: cpb <cpb@earth.localdomain>
+Commit: cpb <cpb@earth.localdomain>
+
+    Oops, not using CVS anymore. Use $Flickr::Upload::VERSION.
+
+commit 55339492be24b9431de9068bc58d3b185e6af15c
+Author: cpb <cpb@earth.localdomain>
+Commit: cpb <cpb@earth.localdomain>
+
+    Add some documentation suggested by Mark Atwood.
+
 commit 90867ead83ac5f317f6d4fbe2a018fd5185af4ce
 Author: cpb <cpb@earth.localdomain>
 Commit: cpb <cpb@earth.localdomain>
