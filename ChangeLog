@@ -1,3 +1,12 @@
+commit 0aa13ed44f5bcb64cd01994823c406162fe1fb10
+Author: cpb <cpb@localhost.localdomain>
+Commit: cpb <cpb@localhost.localdomain>
+
+    *: patch from Pascal Terjan to fix
+      http://rt.cpan.org/Ticket/Display.html?id=33750
+    *: also fix t/progress.t
+    *: bump version to 1.30
+
 commit 7c3ce4a0e76e48266359a6c4c4e54f82b64add97
 Author: cpb <cpb@earth.localdomain>
 Commit: cpb <cpb@earth.localdomain>
