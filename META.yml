@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Flickr-Upload
-version:             1.31
+version:             1.32
 abstract:            Module for uploading images to flickr.com
 license:             ~
 author:              
