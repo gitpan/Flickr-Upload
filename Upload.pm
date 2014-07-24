@@ -8,7 +8,7 @@ use HTTP::Request::Common;
 use Flickr::API;
 use XML::Parser::Lite::Tree;
 
-our $VERSION = '1.32';
+our $VERSION = '1.4';
 
 our @ISA = qw(Flickr::API);
 
@@ -70,7 +70,7 @@ Upload an image to L<flickr.com>.
 			'secret' => '37465825'
 		});
 
-Instatiates a L<Flickr::Upload> instance. The C<key> argument is your
+Instantiates a L<Flickr::Upload> instance. The C<key> argument is your
 API key and the C<secret> is the API secret associated with it. To get an
 API key and secret, go to L<http://www.flickr.com/services/api/key.gne>.
 
@@ -217,7 +217,7 @@ sub make_upload_request {
 	# _required_ by the uploader.
 	die "Missing 'auth_token' argument" unless $args{'auth_token'};
 
-	my $uri = $args{'uri'} || 'http://api.flickr.com/services/upload/';
+	my $uri = $args{'uri'} || 'https://api.flickr.com/services/upload/';
 
 	# passed in separately, so remove from the hash
 	delete $args{uri};
@@ -268,10 +268,28 @@ sub upload_request {
 	my $req = shift;
 	die "expecting a HTTP::Request" unless $req->isa('HTTP::Request');
 
-	my $res = $self->request( $req );
+	# Try 3 times to upload data. Without this flickr_upload is bound
+	# to die on large uploads due to some miscellaneous network
+	# issues. Timeouts on flickr or something else.
+	my ($res, $tree);
+	my $tries = 3;
+	for my $try (1 .. $tries) {
+		# Try to upload
+		$res = $self->request( $req );
+		return () unless defined $res;
 
-	my $tree = XML::Parser::Lite::Tree::instance()->parse($res->decoded_content());
-	return () unless defined $tree;
+		if ($res->is_success) {
+			$tree = XML::Parser::Lite::Tree::instance()->parse($res->decoded_content());
+			return () unless defined $tree;
+			last;
+		} else {
+			my $what_next = ($try == $tries ? "giving up" : "trying again");
+			my $status = $res->status_line;
+
+			print STDERR "Failed uploading attempt attempt $try/$tries, $what_next. Message from server was: '$status'\n";
+			next;
+		}
+	}
 
 	my $photoid = response_tag($tree, 'rsp', 'photoid');
 	my $ticketid = response_tag($tree, 'rsp', 'ticketid');
@@ -392,15 +410,18 @@ L<http://flickr.com/services/api/>
 
 L<Flickr::API>
 
-=head1 AUTHOR
+=head1 AUTHORS
 
 Christophe Beauregard, L<cpb@cpan.org>
+
+E<AElig>var ArnfjE<ouml>rE<eth> Bjarmason, <avar@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
 This module is not an official Flickr.com (or Ludicorp, or Yahoo) service.
 
-Copyright (C) 2004,2005 by Christophe Beauregard
+Copyright (C) 2004-2008 by Christophe Beauregard and 2008-2009 by
+E<AElig>var ArnfjE<ouml>rE<eth> Bjarmason
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.3 or,

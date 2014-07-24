@@ -1,4 +1,120 @@
-commit 25738657dcf4623445f69433ae63973d1e24d4cb (refs/heads/master)
+commit 207251a67870f816fb0d1e6037deef8cc1890503 (HEAD, origin/master, origin/HEAD, master)
+Author:     maspotts <maspotts@yahoo.com>
+AuthorDate: Mon Jun 30 21:37:55 2014 -0700
+Commit:     maspotts <maspotts@yahoo.com>
+CommitDate: Mon Jun 30 21:37:55 2014 -0700
+
+    Update Upload.pm
+    
+    Bump version to 1.4.
+
+commit 9302c6ffe2b619a7da571eda46308708d8863596
+Author:     maspotts <maspotts@yahoo.com>
+AuthorDate: Mon Jun 30 21:33:54 2014 -0700
+Commit:     maspotts <maspotts@yahoo.com>
+CommitDate: Mon Jun 30 21:33:54 2014 -0700
+
+    Update Upload.pm
+    
+    Use SSL api.
+
+commit 5c210ab9bac949075c6a46d5d87718c79f3d6551
+Author:     Ævar Arnfjörð Bjarmason <avarab@gmail.com>
+AuthorDate: Wed Oct 14 17:58:20 2009 +0000
+Commit:     Ævar Arnfjörð Bjarmason <avarab@gmail.com>
+CommitDate: Wed Oct 14 17:58:20 2009 +0000
+
+    Add myself to AUTHORS/COPYRIGHT
+
+commit d9ccd247ca8b59e3e10329c6b4533c97a9ef0d30
+Author:     Ævar Arnfjörð Bjarmason <avarab@gmail.com>
+AuthorDate: Wed Oct 14 17:50:41 2009 +0000
+Commit:     Ævar Arnfjörð Bjarmason <avarab@gmail.com>
+CommitDate: Wed Oct 14 17:50:41 2009 +0000
+
+    Make --progress and --report boolean (!) switches in Getopt::Long
+    
+    This means --no-report and --no-progress can be specified as well as
+    --report and --progress.
+
+commit 8d8f04c98438c938ee9894c33cfc2f4a2d0d7ae5
+Author:     Ævar Arnfjörð Bjarmason <avarab@gmail.com>
+AuthorDate: Wed Oct 14 17:45:41 2009 +0000
+Commit:     Ævar Arnfjörð Bjarmason <avarab@gmail.com>
+CommitDate: Wed Oct 14 17:45:41 2009 +0000
+
+    Add a --report switch to suppress the "Waiting for upload results" message
+    
+    Also add a facility to allow the default of --progress and --report to
+    be changed via the ~/.flickrrc configuration file.
+
+commit 27a4da0cbd6b5556069d7007f692c7c888b6f325
+Author:     Ævar Arnfjörð Bjarmason <avarab@gmail.com>
+AuthorDate: Wed Oct 14 17:32:11 2009 +0000
+Commit:     Ævar Arnfjörð Bjarmason <avarab@gmail.com>
+CommitDate: Wed Oct 14 17:32:11 2009 +0000
+
+    "git-log" has been deprecated in favor of "git log"
+
+commit 6b2b1a87ccd4eabe66b28db56a2df7bf6e5f0f2b
+Author:     Ævar Arnfjörð Bjarmason <avarab@gmail.com>
+AuthorDate: Wed Oct 14 17:12:00 2009 +0000
+Commit:     Ævar Arnfjörð Bjarmason <avarab@gmail.com>
+CommitDate: Wed Oct 14 17:12:00 2009 +0000
+
+    Solve RT#50493. Sometimes Flickr::Upload will die during upload due to network errors.
+    
+    Before it would do this:
+    
+        Uploading img_4289.jpg...
+        junk '500 read failed: Connection reset by peer
+        ' before XML element
+    
+    and simply die. Now it'll try again in case of errors:
+    
+        Uploading img_4289.jpg...
+        Failed uploading attempt attempt 1/3, trying again. [...]
+        Uploading img_4289.jpg...
+
+commit 77f2d561665af0cef16b6623b0e5c8ea4f929816
+Author:     Christophe Beauregard <cpb@cpan.org>
+AuthorDate: Sat Dec 20 11:01:44 2008 -0500
+Commit:     Christophe Beauregard <cpb@cpan.org>
+CommitDate: Sat Dec 20 11:01:44 2008 -0500
+
+    typo fix
+
+commit 687838e8b1f5a8d1d533ae10a04b7aa72be4b539
+Author:     Christophe Beauregard <cpb@cpan.org>
+AuthorDate: Mon Oct 27 14:43:55 2008 -0400
+Commit:     Christophe Beauregard <cpb@cpan.org>
+CommitDate: Mon Oct 27 14:43:55 2008 -0400
+
+    Incorporate part of
+    http://svn.debian.org/wsvn/pkg-perl/trunk/libflickr-upload-perl/debian/patches/failupload.patch?op=file&rev=0&sc=0
+    
+    So the failupload test works okay when there's no net access.
+
+commit f2c2c7f74fd2ad23241195c85168614eac4fe6aa
+Author:     Christophe Beauregard <cpb@cpan.org>
+AuthorDate: Wed Oct 15 06:33:17 2008 -0400
+Commit:     Christophe Beauregard <cpb@cpan.org>
+CommitDate: Wed Oct 15 06:33:17 2008 -0400
+
+    whoo, we're a few years behind on the copyrights
+
+commit 36f2a4434770d8cbdcdbceee985fc19d4bc3f9f9
+Author:     Christophe Beauregard <cpb@cpan.org>
+AuthorDate: Wed Oct 15 06:27:38 2008 -0400
+Commit:     Christophe Beauregard <cpb@cpan.org>
+CommitDate: Wed Oct 15 06:27:38 2008 -0400
+
+    Merge Debian patch r26041 from Alex Muntada" <alexm@alexm.org>:
+      Hopefully fixed last TODO item via quilt:
+        W: libflickr-upload-perl: manpage-has-errors-from-pod2man
+            usr/share/man/man1/flickr_upload.1p.gz:324
+
+commit 25738657dcf4623445f69433ae63973d1e24d4cb (tag: 1.32)
 Author:     Christophe Beauregard <cpb@cpan.org>
 AuthorDate: Wed Sep 17 20:17:52 2008 -0400
 Commit:     Christophe Beauregard <cpb@cpan.org>
@@ -33,7 +149,7 @@ CommitDate: Wed Sep 17 20:03:35 2008 -0400
     Add a --check option to invoke the flickr.auth.checkToken API call and
     just generally validate the authentication information.
 
-commit 3afc55b07bc0087afe9919563ad0392c8a221c54 (refs/remotes/origin/master, refs/remotes/origin/HEAD, refs/remotes/gitorious/master)
+commit 3afc55b07bc0087afe9919563ad0392c8a221c54
 Author:     Christophe Beauregard <cpb@cpan.org>
 AuthorDate: Sat Jun 21 18:59:13 2008 -0400
 Commit:     Christophe Beauregard <cpb@cpan.org>
@@ -41,7 +157,7 @@ CommitDate: Sat Jun 21 18:59:13 2008 -0400
 
     put more detail in the ChangeLog. Specifically, we'd like to see dates.
 
-commit 75d78079f595f2516a5efa4bfdada2961f0c08a3 (refs/tags/1.31)
+commit 75d78079f595f2516a5efa4bfdada2961f0c08a3 (tag: 1.31)
 Author:     Christophe Beauregard <cpb@cpan.org>
 AuthorDate: Wed Jun 18 16:39:42 2008 -0400
 Commit:     Christophe Beauregard <cpb@cpan.org>
@@ -83,7 +199,7 @@ CommitDate: Tue Jun 17 20:16:37 2008 -0400
     bump version to 1.31
 
 commit 9a7c22dc11e16ff483b01dc491f11e146683e2d4
-Merge: b53a716... c87f9be...
+Merge: b53a716 c87f9be
 Author:     Christophe Beauregard <cpb@cpan.org>
 AuthorDate: Tue Jun 17 20:15:14 2008 -0400
 Commit:     Christophe Beauregard <cpb@cpan.org>
@@ -123,7 +239,7 @@ CommitDate: Tue Jun 17 19:12:24 2008 -0400
 
     add note about GIT repo
 
-commit c87f9be69faff0a337e3f32e46758d97d407308b (refs/remotes/avar/master)
+commit c87f9be69faff0a337e3f32e46758d97d407308b
 Author:     Ævar Arnfjörð Bjarmason <avar@cpan.org>
 AuthorDate: Tue Jun 17 03:49:01 2008 +0000
 Commit:     Ævar Arnfjörð Bjarmason <avar@cpan.org>
